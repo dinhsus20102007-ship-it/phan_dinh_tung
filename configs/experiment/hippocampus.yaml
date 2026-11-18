@@ -12,7 +12,14 @@ seed: 12345
 trainer:
   min_epochs: 1
   max_epochs: 20
+  accelerator: gpu        # Bật GPU T4 lên (từ 10 phút/epoch xuống còn vài giây/epoch)
+  devices: 1
+  precision: 16-mixed     # Tăng tốc gấp đôi & tiết kiệm VRAM trên T4
   gradient_clip_val: 12
+
+callbacks:
+  model_checkpoint:
+    monitor: "val/dice"   # Sửa từ val/acc sang val/dice
 
 model:
   num_classes: 3          # nền + 2 vùng hippocampus
