@@ -1,7 +1,7 @@
 # @package _global_
 
 defaults:
-  - override /data: test/hippocampus
+  - override /data: hippocampus
   - override /model: nnunet
   - override /callbacks: default
   - override /trainer: default
