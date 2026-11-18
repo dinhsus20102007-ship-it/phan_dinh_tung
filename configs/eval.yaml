@@ -15,4 +15,8 @@ task_name: "eval"
 tags: ["dev"]
 
 # passing checkpoint path is necessary for evaluation
-ckpt_path: ???
+model:
+  num_classes: 3
+  net:
+    in_channels: 1
+    dim: 3
