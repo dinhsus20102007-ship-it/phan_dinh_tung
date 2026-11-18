@@ -1,4 +1,4 @@
-_target_: src.data.test.hippocampus_datamodule.HippocampusDataModule
+_target_: src.data.test.hippocampus_datamodule.SegDataModule
 data_dir: ${paths.data_dir}
 batch_size: 2
 num_workers: 2
