@@ -43,7 +43,7 @@ class SegLitModule(LightningModule):
         # so it's worth to make sure validation metrics don't store results from these checks
         self.val_loss.reset()
         self.val_dice.reset()
-        self.val_acc_best.reset()
+        self.val_dice_best.reset()
 
     def dice_loss(self, logits, y, eps= 1e-5): #for training(backprop)
         probs = torch.softmax(logits, dim=1)
