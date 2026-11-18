@@ -1,0 +1,7 @@
+_target_: src.data.test.hippocampus_datamodule.HippocampusDataModule
+data_dir: ${paths.data_dir}
+batch_size: 2
+num_workers: 2
+pin_memory: true
+patch_size: [48, 64, 48]
+val_split: 0.2

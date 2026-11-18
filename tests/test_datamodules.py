@@ -3,7 +3,7 @@ from pathlib import Path
 import pytest
 import torch
 
-from src.data.seg_datamodule import MNISTDataModule
+from src.data.hippocampus_datamodule import MNISTDataModule
 
 
 @pytest.mark.parametrize("batch_size", [32, 128])
