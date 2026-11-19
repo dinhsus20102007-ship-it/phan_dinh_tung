@@ -10,7 +10,7 @@ from omegaconf import DictConfig
 import functools
 import torch
 
-torch.serialization.add_safe_globals([torch.optim.adam.Adam])
+torch.serialization.add_safe_globals([torch.optim.Adam])
 torch.serialization.add_safe_globals([functools.partial])
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True)
