@@ -9,7 +9,7 @@ from lightning.pytorch.loggers import Logger
 from omegaconf import DictConfig
 import functools
 import torch
-
+torch.serialization.add_safe_globals([torch.optim.lr_scheduler.ReduceLROnPlateau])
 torch.serialization.add_safe_globals([torch.optim.Adam])
 torch.serialization.add_safe_globals([functools.partial])
 
